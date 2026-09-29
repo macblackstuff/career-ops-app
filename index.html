@@ -3,25 +3,48 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Career Ops</title>
+<meta name="robots" content="index, follow">
+<meta name="description" content="Career Ops — personal job-application automation app by its developer. Purpose, features, and Google API usage.">
+<meta property="og:site_name" content="Career Ops">
+<meta property="og:title" content="Career Ops">
+<title>Career Ops — Personal Job-Application Automation</title>
 <style>
-body{font-family:-apple-system,system-ui,sans-serif;max-width:720px;margin:3rem auto;padding:0 1.5rem;line-height:1.6;color:#1a1a1a}
-h1{font-size:2rem}footer{margin-top:3rem;color:#666;font-size:.9rem}
+body{font-family:-apple-system,system-ui,sans-serif;max-width:760px;margin:3rem auto;padding:0 1.5rem;line-height:1.65;color:#1a1a1a}
+h1{font-size:2.1rem;margin-bottom:.2rem}.tag{color:#555;margin-top:0}h2{font-size:1.25rem;margin-top:2.2rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #ddd;padding:.5rem .7rem;text-align:left;font-size:.95rem}th{background:#f6f6f6}
+footer{margin-top:3rem;color:#666;font-size:.9rem}
 </style>
 </head>
 <body>
 <h1>Career Ops</h1>
-<p><strong>Career Ops</strong> is a personal productivity application built and operated by its developer for private, non-commercial use. It automates the developer's own job-application workflow: tracking job postings, scoring them for fit, generating tailored application documents, and sending a daily summary report by email.</p>
-<h2>What it does</h2>
+<p class="tag">Personal job-application automation · operated by its developer for private, non-commercial use</p>
+
+<h2>Purpose</h2>
+<p><strong>Career Ops</strong> is a personal productivity application. Its sole purpose is to automate its developer's own job-search workflow end to end: discovering job postings, scoring each posting for fit, generating a tailored CV and cover letter per application, filling standard application forms, and delivering a daily summary report by email. It is used only by its developer, on the developer's own accounts and data. It has no other users and offers no service to third parties.</p>
+
+<h2>Features</h2>
 <ul>
-<li>Reads the developer's own job-application tracking data.</li>
-<li>Sends automated daily summary reports for the developer's own account.</li>
-<li>Stores generated application documents (CVs, cover letters) in the developer's own cloud storage.</li>
+<li><strong>Job pipeline</strong> — collects remote AI/automation job postings into a private tracker and scores each for fit.</li>
+<li><strong>Document generation</strong> — produces a tailored CV and cover letter per application from the developer's own master CV.</li>
+<li><strong>Form preparation</strong> — pre-fills standard application forms with the developer's own answers for review.</li>
+<li><strong>Daily report</strong> — emails the developer a summary of the day's submissions with the generated documents.</li>
 </ul>
-<h2>Accounts</h2>
-<p>Career Ops accesses only the developer's own Google account, solely to perform the actions above on the developer's behalf. It has no other users, collects no data from third parties, and shares nothing.</p>
-<p>Privacy policy: <a href="/career-ops-app/privacy.html">Career Ops privacy policy</a></p>
-<p>Terms of service: <a href="/career-ops-app/terms.html">Career Ops terms of service</a></p>
-<footer>Operator contact: hyperviralpai@gmail.com</footer>
+
+<h2>Google API usage</h2>
+<table>
+<tr><th>API</th><th>Scope</th><th>Used for</th></tr>
+<tr><td>Gmail API</td><td>send, compose, modify, labels, settings</td><td>Sending the developer's own daily summary reports; reading replies to the developer's own applications.</td></tr>
+<tr><td>Google Drive API</td><td>full read/write</td><td>Storing and reading the developer's own generated CVs and cover letters.</td></tr>
+<tr><td>Docs / Sheets / Slides APIs</td><td>full read/write</td><td>Editing the developer's own master CV and tracking documents.</td></tr>
+<tr><td>Calendar &amp; Contacts APIs</td><td>full</td><td>Scheduling the developer's own interviews and managing the developer's own contacts.</td></tr>
+<tr><td>Tasks API</td><td>full</td><td>Tracking the developer's own follow-up tasks.</td></tr>
+<tr><td>Cloud Pub/Sub, Cloud Platform (read-only)</td><td>service-level</td><td>Infrastructure metadata for the above only.</td></tr>
+</table>
+
+<h2>Compliance</h2>
+<p>Career Ops complies with the <a href="https://developers.google.com/terms">Google API Services User Data Policy</a>, including the Limited Use requirements. It does not transfer, sell, or use Google user data for advertising, data mining, or any purpose outside the described features. It processes only the developer's own data.</p>
+
+<p><a href="/privacy.html">Privacy policy</a> · <a href="/terms.html">Terms of service</a></p>
+<footer>Operator contact: <a href="mailto:hyperviralpai@gmail.com">hyperviralpai@gmail.com</a></footer>
 </body>
 </html>
